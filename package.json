@@ -23,6 +23,10 @@
     "url": "https://github.com/Runtu4378/deal_mobile_scroll/issues"
   },
   "homepage": "https://github.com/Runtu4378/deal_mobile_scroll#readme",
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "vue": "^2.5.2",

@@ -47,7 +47,7 @@ module.exports = {
 
   build: {
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist/static'),
+    assetsRoot: path.resolve(__dirname, '../'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
