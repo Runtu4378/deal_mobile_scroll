@@ -1,5 +1,6 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
@@ -90,5 +91,13 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    // http://vuejs.github.io/vue-loader/en/workflow/production.html
+    new webpack.DefinePlugin({
+      'PUBLIC_PATH': process.env.NODE_ENV === 'production'
+        ? JSON.stringify(config.build.assetsPublicPath)
+        : JSON.stringify(config.dev.assetsPublicPath),
+    }),
+  ],
 }

@@ -5,6 +5,8 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
+  /* eslint-disable-next-line */
+  base: PUBLIC_PATH,
   scrollBehavior (to, from, savedPosition) {
     // 如果你的連結是帶 # 這種
     // to.hash 就會有值(值就是連結)
